@@ -42,6 +42,7 @@ syn region htcComment oneline start=/^\s*#/ end=/$/
 " HTC command
 syn keyword htcCommand arguments
 syn keyword htcCommand batch_name
+syn keyword htcCommand copy_to_spool
 syn keyword htcCommand environment
 syn keyword htcCommand error
 syn keyword htcCommand executable
