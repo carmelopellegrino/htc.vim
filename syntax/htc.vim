@@ -72,6 +72,7 @@ syn keyword htcCommand when_to_transfer_output
 syn keyword htcCommand x509userproxy
 syn match   htcCommand display 'request_[a-zA-Z\.]\+'
 syn match   htcCommand display '[a-zA-Z0-9]\+_oauth_permissions'
+syn match   htcCommand display '[a-zA-Z0-9]\+_oauth_resource'
 syn match   htcCustomCommand display '^+[a-zA-Z0-9]\+'
 syn keyword htcQueueCommand queue
 
