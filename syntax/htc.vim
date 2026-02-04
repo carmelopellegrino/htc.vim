@@ -64,11 +64,14 @@ syn keyword htcCommand transfer_executable
 syn keyword htcCommand transfer_input_files
 syn keyword htcCommand transfer_output_files
 syn keyword htcCommand universe
+syn keyword htcCommand use_oauth_services
 syn keyword htcCommand use_scitokens
 syn keyword htcCommand use_x509userproxy
+syn keyword htcCommand want_io_proxy
 syn keyword htcCommand when_to_transfer_output
 syn keyword htcCommand x509userproxy
 syn match   htcCommand display 'request_[a-zA-Z\.]\+'
+syn match   htcCommand display '[a-zA-Z0-9]\+_oauth_permissions'
 syn match   htcCustomCommand display '^+[a-zA-Z0-9]\+'
 syn keyword htcQueueCommand queue
 
