@@ -15,6 +15,7 @@ syn case ignore
 syn region htcString       start=/"/  end=/"/  end=/$/  skip=/\\./
 syn region htcString       start=/`/  end=/`/  end=/$/  skip=/\\./
 syn region htcString       start=/\(s\)\@<!'\(s \|t \)\@!/  end=/'/  end=/$/  skip=/\\./
+syn region htcVariable     start="\$("  end=")" end=/$/
 
 syn keyword htcBool        true false undefined yes no
 syn match   htcNumber      display '\<\d\+\>'
@@ -32,7 +33,7 @@ syn keyword htcUniverse    docker
 syn keyword htcUniverse    container
 syn keyword htcTransOut    ON_EXIT ON_EXIT_OR_EVICT ON_SUCCESS
 
-syn cluster htcValues contains=htcString,htcNumber,htcNumberFloat,htcBool,htcUniverse,htcTransOut
+syn cluster htcValues contains=htcString,htcNumber,htcNumberFloat,htcBool,htcUniverse,htcTransOut,htcVariable
 
 syn region htcValue oneline contains=@htcValues start=/=/  end=/$/ transparent
 
@@ -287,6 +288,7 @@ hi def link htcCustomCommand    Keyword
 
 hi def link htcUniverse         Identifier
 hi def link htcTransOut         Identifier
+hi def link htcVariable         Statement
 
 let b:current_syntax = "htc"
 
