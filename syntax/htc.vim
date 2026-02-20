@@ -39,7 +39,7 @@ syn region htcValue oneline contains=@htcValues start=/=/  end=/$/ transparent
 " Comments
 syn region htcComment oneline start=/^\s*#/ end=/$/
 
-" HTC command
+" HTC commands
 syn keyword htcCommand arguments
 syn keyword htcCommand batch_name
 syn keyword htcCommand copy_to_spool
