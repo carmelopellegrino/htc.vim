@@ -12,10 +12,10 @@ set cpo&vim
 syn case ignore
 
 " HTC constants
-syn region htcString       start=/"/  end=/"/  end=/$/  skip=/\\./
-syn region htcString       start=/`/  end=/`/  end=/$/  skip=/\\./
-syn region htcString       start=/\(s\)\@<!'\(s \|t \)\@!/  end=/'/  end=/$/  skip=/\\./
-syn region htcVariable     start="\$("  end=")" end=/$/
+syn region htcVariable     start="\$("  end=")" end=/$/ keepend contained
+syn region htcString       start=/"/  end=/"/  end=/$/  skip=/\\./ contains=htcVariable
+syn region htcString       start=/`/  end=/`/  end=/$/  skip=/\\./ contains=htcVariable
+syn region htcString       start=/\(s\)\@<!'\(s \|t \)\@!/  end=/'/  end=/$/  skip=/\\./ contains=htcVariable
 
 syn keyword htcBool        true false undefined yes no
 syn match   htcNumber      display '\<\d\+\>'
